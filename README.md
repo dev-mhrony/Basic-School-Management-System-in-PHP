@@ -35,5 +35,14 @@ And there you have it, a full setup of Basic School Management System in PHP MyS
 
 UserName: admin <br/> Password: Watch This Youtube <a href = "https://www.youtube.com/watch?v=cQNX1PgWqL4&lc=UgxOVgDFfPgSoNiGlzJ4AaABAg" target="_blank"> Video </a> <br/> Subcribe my You tube Channel \***\* <a href="https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw" target="_blank">Subscribe</a> \*\***
 
+# Preview
 
-#Preview
+![screencapture-localhost-new-schoolmanagement-pages-add-course-php-2023-02-10-15_31_34](https://user-images.githubusercontent.com/78216965/218057774-c5ae2a75-9860-41b9-83e1-a5a0e82b962a.png) 
+
+![screencapture-localhost-new-schoolmanagement-pages-dashboard-php-2023-02-10-15_31_23](https://user-images.githubusercontent.com/78216965/218057787-36d59a51-36cf-4487-aaee-93c241f7a9dc.png) 
+
+![screencapture-localhost-new-schoolmanagement-pages-view-subject-php-2023-02-10-15_34_52](https://user-images.githubusercontent.com/78216965/218057789-298597b6-c753-4955-b096-09f02f60c808.png) 
+
+![screencapture-localhost-new-schoolmanagement-pages-add-subject-php-2023-02-10-15_32_24](https://user-images.githubusercontent.com/78216965/218057796-5ad6b64d-3185-4714-b69c-c0d342801009.png) 
+
+![screencapture-localhost-new-schoolmanagement-pages-view-course-php-2023-02-10-15_31_46](https://user-images.githubusercontent.com/78216965/218057801-ffb26efd-b05c-4c58-a148-0612b860b833.png)
