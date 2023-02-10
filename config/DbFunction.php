@@ -12,8 +12,7 @@ Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 class DbFunction{
 	
 	function login($loginid,$password){
-		
-		
+
       if(!ctype_alpha($loginid) || !ctype_alpha($password)){
       	
         echo "<script>alert('Either LoginId or Password is Missing')</script>";
