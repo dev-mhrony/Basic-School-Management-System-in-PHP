@@ -3,7 +3,7 @@ require('Database.php');
 //$db = Database::getInstance();
 //$mysqli = $db->getConnection();
 /*
- <!-- Author By: MH RONY
+<!-- Author By: MH RONY
 Author Website: https://developerrony.com
 Github Link: https://github.com/dev-mhrony
 Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
