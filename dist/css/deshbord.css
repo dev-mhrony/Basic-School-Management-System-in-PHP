@@ -1,0 +1,25 @@
+.deshbord_info {
+  display: flex;
+
+  justify-content: space-around;
+}
+
+.deshbord_item {
+  padding: 8px;
+  width: 200px;
+  background: #b4e7ff;
+  height: 92px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  box-shadow: 10px 5px 5px #e5e5e5b8;
+}
+.item_list {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}

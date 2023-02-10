@@ -27,6 +27,7 @@ if (!(isset($_SESSION['login']))) {
 
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/css/deshbord.css">
 
     <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -60,10 +61,25 @@ if (!(isset($_SESSION['login']))) {
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="grid" style="--bs-columns: 3;">
-                        <div>Auto-column</div>
-                        <div>Auto-column</div>
-                        <div>Auto-column</div>
+                    <div class="deshbord_info">
+                        <div class="deshbord_item">
+                            <div class="item_list">
+                                <h4>00</h4>
+                                <p><a href="view-course.php">Course List</a></p>
+                            </div>
+                        </div>
+                        <div class="deshbord_item">
+                            <div class="item_list">
+                                <h4>00</h4>
+                                <p><a href="view-subject.php">Subject List</a></p>
+                            </div>
+                        </div>
+                        <div class="deshbord_item">
+                            <div class="item_list">
+                                <h4>00</h4>
+                                <p><a href="view.php">All Student</a></p>
+                            </div>
+                        </div>
                     </div>
                     <!-- /.panel -->
                 </div>
