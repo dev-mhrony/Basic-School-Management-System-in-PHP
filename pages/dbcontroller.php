@@ -6,7 +6,7 @@ Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 $DB_host = "localhost";
 $DB_user = "root";
 $DB_pass = "";
-$DB_name = "schoolmanagement";
+$DB_name = "school_management";
 try
 {
  $DB_con = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
