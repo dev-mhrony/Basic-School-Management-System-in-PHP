@@ -1,10 +1,9 @@
-/*
 <!-- Author By: MH RONY
 Author Website: https://developerrony.com
 Github Link: https://github.com/dev-mhrony
 Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
 -->
-*/<?php
+<?php
 class Database {
 	private $_connection;
 	private static $_instance; //The single instance
