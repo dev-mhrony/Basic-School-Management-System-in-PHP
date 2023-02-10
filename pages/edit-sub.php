@@ -1,5 +1,3 @@
-
-
 <?php
 session_start ();
 include('../config/DbFunction.php');
@@ -27,146 +25,143 @@ if(isset($_POST['submit'])){
 
 <head>
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<title></title>
+    <title></title>
 
-<!-- Bootstrap Core CSS -->
-<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css"
-	rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- MetisMenu CSS -->
-<link href="../bower_components/metisMenu/dist/metisMenu.min.css"
-	rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
-<!-- Custom CSS -->
-<link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
 
-<!-- Custom Fonts -->
-<link href="../bower_components/font-awesome/css/font-awesome.min.css"
-	rel="stylesheet" type="text/css">
+    <!-- Custom Fonts -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 
 </head>
 
 <body>
-<form method="post" >
-	<div id="wrapper">
+    <form method="post">
+        <div id="wrapper">
 
-		<!-- Navigation -->
-		<?php include('leftbar.php')?>;
+            <!-- Navigation -->
+            <?php include('leftbar.php')?>;
 
-		<div id="page-wrapper">
-			<div class="row">
-				<div class="col-lg-12">
-					<h4 class="page-header"> <?php echo strtoupper("welcome"." ".htmlentities($_SESSION['login']));?></h4>
-				</div>
-				<!-- /.col-lg-12 -->
-			</div>
-			<!-- /.row -->
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">Edit Subject</div>
-						<div class="panel-body">
-							<div class="row">
-						 	<div class="col-lg-10">
-									
-										<div class="form-group">
-											<div class="col-lg-4">
-					 <label>Subject1</label>
-											</div>
-											<div class="col-lg-6">
-			
-  <input class="form-control" name="sub1" id="sub1"  value="<?php echo $res->sub1;?>" required="required">       
-											</div>
-											
-										</div>	
-										
-								<br><br>
-								
-		<div class="form-group">
-		<div class="col-lg-4">
-		<label>Subject2</label>
-		</div>
-		<div class="col-lg-6">
-<input class="form-control" name="sub2" id="sub2" value="<?php echo $res->sub2;?>" required="required">         
-		</div>
-	 </div>	
-										
-	 <br><br>								
-			<div class="form-group">
-		<div class="col-lg-4">
-		<label>Subject3</label>
-		</div>
-		<div class="col-lg-6">
-<input class="form-control" name="sub3" id="sub3" value="<?php echo $res->sub3;?>" required="required">         
-		</div>
-	 </div>	
-										
-	 <br><br>								
-	<div class="form-group">
-	<div class="col-lg-4">
-	 <label>Date</label>
-	</div>
-	<div class="col-lg-6">
-	<input class="form-control" value="<?php echo date('d-m-Y');?>" readonly="readonly" name="udate">
-	
-	</div>
-	</div>
-	</div>	
-										
-		<br><br>		
-		
-							<div class="form-group">
-											<div class="col-lg-4">
-												
-											</div>
-											<div class="col-lg-6"><br><br>
-							<input type="submit" class="btn btn-primary" name="submit" value="Update Course"></button>
-											</div>
-											
-										</div>		
-													
-				</div>
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4 class="page-header"> <?php echo strtoupper("welcome"." ".htmlentities($_SESSION['login']));?></h4>
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <marquee onMouseOver="this.stop()" onMouseOut="this.start()"> <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> is the sole owner of this script. It is not suitable for personal use. And releasing it in demo version. Besides, it is being provided for free only from <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>. For any of your problems contact us on <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> facebook group / page or message <a href="https://www.facebook.com/dev.mhrony">MH RONY</a> on facebook. Thanks for staying with <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>.</marquee>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Edit Subject</div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-10">
 
-					</div>
-								
-							</div>
-							
-						</div>
-						
-					</div>
-					
-				</div>
-				
-			</div>
-			
-		</div>
-		
+                                        <div class="form-group">
+                                            <div class="col-lg-4">
+                                                <label>Subject1</label>
+                                            </div>
+                                            <div class="col-lg-6">
 
-	</div>
-	
-	<script src="../bower_components/jquery/dist/jquery.min.js"
-		type="text/javascript"></script>
+                                                <input class="form-control" name="sub1" id="sub1" value="<?php echo $res->sub1;?>" required="required">
+                                            </div>
 
-	
-	<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"
-		type="text/javascript"></script>
+                                        </div>
 
-	<!-- Metis Menu Plugin JavaScript -->
-	<script src="../bower_components/metisMenu/dist/metisMenu.min.js"
-		type="text/javascript"></script>
+                                        <br><br>
 
-	<!-- Custom Theme JavaScript -->
-	<script src="../dist/js/sb-admin-2.js" type="text/javascript"></script>
-	
-	
-</form>
+                                        <div class="form-group">
+                                            <div class="col-lg-4">
+                                                <label>Subject2</label>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <input class="form-control" name="sub2" id="sub2" value="<?php echo $res->sub2;?>" required="required">
+                                            </div>
+                                        </div>
+
+                                        <br><br>
+                                        <div class="form-group">
+                                            <div class="col-lg-4">
+                                                <label>Subject3</label>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <input class="form-control" name="sub3" id="sub3" value="<?php echo $res->sub3;?>" required="required">
+                                            </div>
+                                        </div>
+
+                                        <br><br>
+                                        <div class="form-group">
+                                            <div class="col-lg-4">
+                                                <label>Date</label>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <input class="form-control" value="<?php echo date('d-m-Y');?>" readonly="readonly" name="udate">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br><br>
+
+                                    <div class="form-group">
+                                        <div class="col-lg-4">
+
+                                        </div>
+                                        <div class="col-lg-6"><br><br>
+                                            <input type="submit" class="btn btn-primary" name="submit" value="Update Course"></button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+
+        </div>
+
+        <script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+
+
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="../bower_components/metisMenu/dist/metisMenu.min.js" type="text/javascript"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="../dist/js/sb-admin-2.js" type="text/javascript"></script>
+
+
+    </form>
 </body>
 
 </html>

@@ -19,7 +19,7 @@ if (! (isset ( $_SESSION ['login'] ))) {
        
   }
 
-?> 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +39,7 @@ if (! (isset ( $_SESSION ['login'] ))) {
     <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-   
+
 </head>
 
 <body>
@@ -47,72 +47,79 @@ if (! (isset ( $_SESSION ['login'] ))) {
     <div id="wrapper">
 
         <!-- Navigation -->
-      
-     <?php include('leftbar.php')?>;
 
-           
-         <nav>
-        <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                   <h4 class="page-header"> <?php echo strtoupper("welcome"." ".htmlentities($_SESSION['login']));?></h4>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            View Course
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="dataTable_wrapper">
-                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                    <thead>
-                                        <tr>
-                                            <th>S No</th>
-                                            <th>Short Name</th>
-                                            <th>Full Name</th>
-                                            <th>Created Date</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+        <?php include('leftbar.php')?>;
 
-                                    <?php 
-                                         $sn=1;
-                                     while($res=$rs->fetch_object()){?>	
-                                        <tr class="odd gradeX">
-                                            <td><?php echo $sn?></td>
-                                            <td><?php echo htmlentities( strtoupper($res->cshort));?></td>
-                                            <td><?php echo htmlentities(strtoupper($res->cfull));?></td>
-                                            <td><?php echo htmlentities($res->cdate);?></td>
-                                             <td>&nbsp;&nbsp;<a href="edit-course.php?cid=<?php echo htmlentities($res->cid);?>"><p class="fa fa-edit"></p></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                             <a href="view-course.php?del=<?php echo htmlentities($res->cid); ?>"> <p class="fa fa-times-circle"></p></td>
-                                            
-                                        </tr>
-                                        
-                                    <?php $sn++;}?>   	           
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                           
-                        </div>
-                        <!-- /.panel-body -->
+
+        <nav>
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4 class="page-header"> <?php echo strtoupper("welcome"." ".htmlentities($_SESSION['login']));?></h4>
                     </div>
-                    <!-- /.panel -->
+                    <div style="padding-top: 10px;">
+                        <marquee onMouseOver="this.stop()" onMouseOut="this.start()"> <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> is the sole owner of this script. It is not suitable for personal use. And releasing it in demo version. Besides, it is being provided for free only from <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>. For any of your problems contact us on <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> facebook group / page or message <a href="https://www.facebook.com/dev.mhrony">MH RONY</a> on facebook. Thanks for staying with <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>.</marquee>
+                    </div>
+                    <!-- /.col-lg-12 -->
                 </div>
-                <!-- /.col-lg-12 -->
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                View Course
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="dataTable_wrapper">
+                                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                        <thead>
+                                            <tr>
+                                                <th>S No</th>
+                                                <th>Short Name</th>
+                                                <th>Full Name</th>
+                                                <th>Created Date</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <?php 
+                                         $sn=1;
+                                     while($res=$rs->fetch_object()){?>
+                                            <tr class="odd gradeX">
+                                                <td><?php echo $sn?></td>
+                                                <td><?php echo htmlentities( strtoupper($res->cshort));?></td>
+                                                <td><?php echo htmlentities(strtoupper($res->cfull));?></td>
+                                                <td><?php echo htmlentities($res->cdate);?></td>
+                                                <td>&nbsp;&nbsp;<a href="edit-course.php?cid=<?php echo htmlentities($res->cid);?>">
+                                                        <p class="fa fa-edit"></p>
+                                                    </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <a href="view-course.php?del=<?php echo htmlentities($res->cid); ?>">
+                                                        <p class="fa fa-times-circle"></p>
+                                                </td>
+
+                                            </tr>
+
+                                            <?php $sn++;}?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.table-responsive -->
+
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+
+
+
             </div>
-            <!-- /.row -->
-           
-            
-           
-        </div>
-        <!-- /#page-wrapper -->
+            <!-- /#page-wrapper -->
 
     </div>
     <!-- /#wrapper -->
@@ -137,7 +144,7 @@ if (! (isset ( $_SESSION ['login'] ))) {
     <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
-                responsive: true
+            responsive: true
         });
     });
     </script>
