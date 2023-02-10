@@ -25,7 +25,7 @@
                 </li>
 
                 <li>
-                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Subject<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-book"></i> Subject<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
                             <a href="add-subject.php">Add Subject</a>
@@ -42,11 +42,11 @@
                 </li>
 
                 <li>
-                    <a href="view.php"><i class="fa fa-bar-chart-o fa-fw"></i>View Students</a>
+                    <a href="view.php"><i class="fa fa-graduation-cap"></i> View Students</a>
                 </li>
 
                 <li>
-                    <a href="logout.php"><i class="fa fa-bar-chart-o fa-fw"></i>Logout</a>
+                    <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
                 </li>
             </ul>
         </div>
