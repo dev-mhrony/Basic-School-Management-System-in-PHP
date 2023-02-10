@@ -34,7 +34,7 @@ if(isset($_POST['submit'])){
 
     <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="../dist/css/jquery.validate.css" />
+    <link rel="stylesheet" type="text/css" href="../dist/css/jquery.validate.css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -45,35 +45,35 @@ if(isset($_POST['submit'])){
 </head>
 
 <body>
- <h2 align="center">Student Record Management System</h2>
+    <h2 align="center">Student Record Management System</h2>
     <div class="container">
         <br><br><br><br>
 
-            <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-4 col-md-offset-4">
 
-                <div class="panel panel-primary">
+            <div class="panel panel-primary">
 
-                    <div class="panel-heading">
-                     <h3 class="panel-title">Sign In</h3>
-                    </div>
-                    <div class="panel-body">
-                        <form method="post">
-                            <fieldset>
-                                <div class="form-group">
-             <input class="form-control" placeholder="Login Id"  id="id"name="id" type="text" autofocus autocomplete="off">
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Password" id="password"name="password" type="password" value="">
-                                </div>
-                              
-                                <!-- Change this to a button or input when using this as a form -->
-                                <input type="submit" value="login" name="submit" class="btn btn-lg btn-success btn-block">
-                            </fieldset>
-                        </form>
-                    </div>
+                <div class="panel-heading">
+                    <h3 class="panel-title">Sign In</h3>
+                </div>
+                <div class="panel-body">
+                    <form method="post">
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Login Id" id="id" name="id" type="text" autofocus autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Password" id="password" name="password" type="password" value="">
+                            </div>
+
+                            <!-- Change this to a button or input when using this as a form -->
+                            <input type="submit" value="login" name="submit" class="btn btn-lg btn-success btn-block">
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- jQuery -->
@@ -87,23 +87,21 @@ if(isset($_POST['submit'])){
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
- <script src="../dist/jquery-1.3.2.js" type="text/javascript"></script>
- <script src="../dist/jquery.validate.js" type="text/javascript"></script>
- <script type="text/javascript">
-            
-            jQuery(function(){
-                jQuery("#id").validate({
-                    expression: "if (VAL.match(/^[a-z]$/)) return true; else return false;",
-                    message: "Should be a valid id"
-                });
-                jQuery("#password").validate({
-                    expression: "if (VAL.match(/^[a-z]$/)) return true; else return false;",
-                    message: "Should be a valid password"
-                });
-                
-            });
-            
-        </script>
+    <script src="../dist/jquery-1.3.2.js" type="text/javascript"></script>
+    <script src="../dist/jquery.validate.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery(function() {
+        jQuery("#id").validate({
+            expression: "if (VAL.match(/^[a-z]$/)) return true; else return false;",
+            message: "Should be a valid id"
+        });
+        jQuery("#password").validate({
+            expression: "if (VAL.match(/^[a-z]$/)) return true; else return false;",
+            message: "Should be a valid password"
+        });
+
+    });
+    </script>
 </body>
 
 </html>

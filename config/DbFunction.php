@@ -2,10 +2,12 @@
 require('Database.php');
 //$db = Database::getInstance();
 //$mysqli = $db->getConnection();
+
 class DbFunction{
 	
 	function login($loginid,$password){
-	
+		
+		
       if(!ctype_alpha($loginid) || !ctype_alpha($password)){
       	
         echo "<script>alert('Either LoginId or Password is Missing')</script>";
