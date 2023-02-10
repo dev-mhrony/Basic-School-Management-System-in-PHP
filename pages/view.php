@@ -37,7 +37,6 @@ if (! (isset ( $_SESSION ['login'] ))) {
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-
 </head>
 
 <body>
@@ -47,8 +46,6 @@ if (! (isset ( $_SESSION ['login'] ))) {
         <!-- Navigation -->
 
         <?php include('leftbar.php')?>;
-
-
         <nav>
             <div id="page-wrapper">
                 <div class="row">
