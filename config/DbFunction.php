@@ -2,7 +2,13 @@
 require('Database.php');
 //$db = Database::getInstance();
 //$mysqli = $db->getConnection();
-
+/*
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+*/
 class DbFunction{
 	
 	function login($loginid,$password){
@@ -252,7 +258,13 @@ function edit_course($cshort,$cfull,$udate,$id){
     echo 'alert("Course Updated Successfully")'; 
     echo '</script>';
 
-}
+}/*
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+*/
 
 
 function edit_subject($sub1,$sub2,$sub3,$udate,$id){
@@ -350,4 +362,10 @@ function del_std($id){
 
 }
 
-?>
+?>/*
+<!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+*/

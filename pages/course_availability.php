@@ -1,8 +1,12 @@
-<?php
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+--><?php
 $dbuser="root";
 $dbpass="";
 $host="localhost";
-$dbname = "schoolmanagement";
+$dbname = "school_management";
 $mysqli = new mysqli($host, $dbuser, $dbpass, $dbname);
 if(!empty($_POST['cshort'])){
 $cshort=$_POST['cshort'];
@@ -55,4 +59,8 @@ if(!empty($_POST['cfull1'])){
 		echo "<span style='color:red'> Course Full Name Already Exist .</span>";
 }
 ?>
-
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->

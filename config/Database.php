@@ -1,15 +1,27 @@
-<?php
+/*
+<!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+*/<?php
 class Database {
 	private $_connection;
 	private static $_instance; //The single instance
 	private $_host = "localhost";
 	private $_username = "root";
 	private $_password = "";
-	private $_database = "schoolmanagement";
+	private $_database = "school_management";
 	/*
 	Get an instance of the Database
 	@return Instance
-	*/
+	*//*
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+*/
 	public static function getInstance() {
 		if(!self::$_instance) { // If no instance then make one
 			self::$_instance = new self();
@@ -35,4 +47,10 @@ class Database {
 }
 
 
-?>
+?>/*
+<!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+*/

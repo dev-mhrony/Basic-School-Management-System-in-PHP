@@ -3,7 +3,13 @@
     padding: 20px 0 20px;
     list-style: none;
 }
-
+/*
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+*/
 .timeline:before {
     content: " ";
     position: absolute;

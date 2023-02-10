@@ -1,4 +1,8 @@
-<?php
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+--><?php
 session_start ();
 include('../config/DbFunction.php');
 	$obj=new DbFunction();
@@ -18,197 +22,210 @@ if (! (isset ( $_SESSION ['login'] ))) {
 
 
 	?>
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+ <html lang="en">
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title></title>
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-</head>
+ <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="description" content="">
+     <meta name="author" content="">
+     <title></title>
+     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+ </head>
 
-<body>
-    <form method="post">
-        <div id="wrapper">
+ <body>
+     <form method="post">
+         <div id="wrapper">
 
-            <!-- Navigation -->
-            <?php include('leftbar.php')?>;
-
-
-            <div id="page-wrapper">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h4 class="page-header"> <?php echo strtoupper("welcome"." ".htmlentities($_SESSION['login']));?></h4>
-                    </div>
-                    <div style="padding-top: 10px;">
-                        <marquee onMouseOver="this.stop()" onMouseOut="this.start()"> <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> is the sole owner of this script. It is not suitable for personal use. And releasing it in demo version. Besides, it is being provided for free only from <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>. For any of your problems contact us on <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> facebook group / page or message <a href="https://www.facebook.com/dev.mhrony">MH RONY</a> on facebook. Thanks for staying with <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>.</marquee>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <!-- /.row -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Add Subject</div>
+             <!-- Navigation -->
+             <?php include('leftbar.php')?>;
 
 
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-lg-10">
-
-                                        <div class="form-group">
-                                            <div class="col-lg-4">
-                                                <label>Course Short Name<span id="" style="font-size:11px;color:Red">*</span> </label>
-                                            </div>
-
-                                            <div class="col-lg-6">
-                                                <select class="form-control" name="course-short" id="cshort" onchange="courseAvailability()" required="required">
-                                                    <option VALUE="">SELECT</option>
-                                                    <?php while($res=$rs->fetch_object()){?>
-
-                                                    <option VALUE="<?php echo htmlentities($res->cid);?>"><?php echo htmlentities($res->cshort)?></option>
-
-
-                                                    <?php }?>
-                                            </div>
-
-                                            </select>
-                                            <span id="course-availability-status" style="font-size:12px;"></span>
-                                        </div>
-                                    </div>
-
-                                    <br><br>
-
-                                    <div class="form-group">
-                                        <div class="col-lg-4">
-                                            <label>Course Full Name<span id="" style="font-size:11px;color:red">*</span></label>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <select class="form-control" name="course-full" id="cfull" required="required" onchange="coursefullAvail()">
-                                                <option VALUE="">SELECT</option>
-                                                <?php while($res1=$rs1->fetch_object()){?>
-
-                                                <option VALUE="<?php echo htmlentities($res1->cfull);?>"><?php echo htmlentities($res1->cfull)?></option>
+             <div id="page-wrapper">
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <h4 class="page-header"> <?php echo strtoupper("welcome"." ".htmlentities($_SESSION['login']));?></h4>
+                     </div>
+                     <div style="padding-top: 10px;">
+                         <marquee onMouseOver="this.stop()" onMouseOut="this.start()"> <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> is the sole owner of this script. It is not suitable for personal use. And releasing it in demo version. Besides, it is being provided for free only from <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>. For any of your problems contact us on <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> facebook group / page or message <a href="https://www.facebook.com/dev.mhrony">MH RONY</a> on facebook. Thanks for staying with <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>.</marquee>
+                     </div>
+                     <!-- /.col-lg-12 -->
+                 </div>
+                 <!-- /.row -->
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <div class="panel panel-default">
+                             <div class="panel-heading">Add Subject</div>
 
 
-                                                <?php }?>
-                                            </select>
-                                            <span id="course-status" style="font-size:12px;"></span>
-                                        </div>
-                                    </div>
-                                    <br><br>
+                             <div class="panel-body">
+                                 <div class="row">
+                                     <div class="col-lg-10">
 
-                                    <div class="form-group">
-                                        <div class="col-lg-4">
-                                            <label>Subject1</label>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <input class="form-control" name="sub1">
-                                        </div>
-                                    </div>
-                                    <br><br>
+                                         <div class="form-group">
+                                             <div class="col-lg-4">
+                                                 <label>Course Short Name<span id="" style="font-size:11px;color:Red">*</span> </label>
+                                             </div>
 
-                                    <div class="form-group">
-                                        <div class="col-lg-4">
-                                            <label>Subject2</label>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <input class="form-control" name="sub2">
-                                        </div>
-                                    </div>
-                                    <br><br>
-                                    <div class="form-group">
-                                        <div class="col-lg-4">
-                                            <label>Subject3</label>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <input class="form-control" name="sub3">
+                                             <div class="col-lg-6">
+                                                 <select class="form-control" name="course-short" id="cshort" onchange="courseAvailability()" required="required">
+                                                     <option VALUE="">SELECT</option>
+                                                     <?php while($res=$rs->fetch_object()){?>
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <br><br><br>
-
-                                <div class="form-group">
-                                    <div class="col-lg-4">
-
-                                    </div>
-                                    <div class="col-lg-6"><br><br>
-                                        <input type="submit" class="btn btn-primary" name="submit" value="Add Subject"></button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-            <p style="text-align: center;"> CopyRight by <a href="">Code Camp BD</a> Design and Developer <a href="">MH RONY</a> All Resalve 2023</p>
-
-        </div>
-
-        </div>
-
-        </div>
+                                                     <option VALUE="<?php echo htmlentities($res->cid);?>"><?php echo htmlentities($res->cshort)?></option>
 
 
-        </div>
+                                                     <?php }?>
+                                             </div>
+                                             <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+                                             </select>
+                                             <span id="course-availability-status" style="font-size:12px;"></span>
+                                         </div>
+                                     </div>
+
+                                     <br><br>
+
+                                     <div class="form-group">
+                                         <div class="col-lg-4">
+                                             <label>Course Full Name<span id="" style="font-size:11px;color:red">*</span></label>
+                                         </div>
+                                         <div class="col-lg-6">
+                                             <select class="form-control" name="course-full" id="cfull" required="required" onchange="coursefullAvail()">
+                                                 <option VALUE="">SELECT</option>
+                                                 <?php while($res1=$rs1->fetch_object()){?>
+
+                                                 <option VALUE="<?php echo htmlentities($res1->cfull);?>"><?php echo htmlentities($res1->cfull)?></option>
 
 
-        <!-- jQuery -->
-        <script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+                                                 <?php }?>
+                                             </select>
+                                             <span id="course-status" style="font-size:12px;"></span>
+                                         </div>
+                                     </div>
+                                     <br><br>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+                                     <div class="form-group">
+                                         <div class="col-lg-4">
+                                             <label>Subject1</label>
+                                         </div>
+                                         <div class="col-lg-6">
+                                             <input class="form-control" name="sub1">
+                                         </div>
+                                     </div>
+                                     <br><br>
 
-        <!-- Metis Menu Plugin JavaScript -->
-        <script src="../bower_components/metisMenu/dist/metisMenu.min.js" type="text/javascript"></script>
+                                     <div class="form-group">
+                                         <div class="col-lg-4">
+                                             <label>Subject2</label>
+                                         </div>
+                                         <div class="col-lg-6">
+                                             <input class="form-control" name="sub2">
+                                         </div>
+                                     </div>
+                                     <br><br>
+                                     <div class="form-group">
+                                         <div class="col-lg-4">
+                                             <label>Subject3</label>
+                                         </div>
+                                         <div class="col-lg-6">
+                                             <input class="form-control" name="sub3">
 
-        <!-- Custom Theme JavaScript -->
-        <script src="../dist/js/sb-admin-2.js" type="text/javascript"></script>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <br><br><br>
 
-        <script>
-        function coursefullAvail() {
-            $("#loaderIcon").show();
-            jQuery.ajax({
-                url: "course_availability.php",
-                data: 'cfull1=' + $("#cfull").val(),
-                type: "POST",
-                success: function(data) {
-                    $("#course-status").html(data);
-                    $("#loaderIcon").hide();
-                },
-                error: function() {}
-            });
-        }
+                                 <div class="form-group">
+                                     <div class="col-lg-4">
 
-        function courseAvailability() {
-            $("#loaderIcon").show();
-            jQuery.ajax({
-                url: "course_availability.php",
-                data: 'cshort1=' + $("#cshort").val(),
-                type: "POST",
-                success: function(data) {
-                    $("#course-availability-status").html(data);
-                    $("#loaderIcon").hide();
-                },
-                error: function() {}
-            });
-        }
-        </script>
-    </form>
-</body>
+                                     </div>
+                                     <div class="col-lg-6"><br><br>
+                                         <input type="submit" class="btn btn-primary" name="submit" value="Add Subject"></button>
+                                     </div>
 
-</html>
+                                 </div>
+
+                             </div>
+
+                         </div>
+
+                     </div>
+
+                 </div>
+
+             </div>
+             <p style="text-align: center;"> CopyRight by <a href="">Code Camp BD</a> Design and Developer <a href="">MH RONY</a> All Resalve 2023</p>
+
+         </div>
+
+         </div>
+
+         </div>
+         <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+
+         </div>
+
+
+         <!-- jQuery -->
+         <script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+
+         <!-- Bootstrap Core JavaScript -->
+         <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+         <!-- Metis Menu Plugin JavaScript -->
+         <script src="../bower_components/metisMenu/dist/metisMenu.min.js" type="text/javascript"></script>
+
+         <!-- Custom Theme JavaScript -->
+         <script src="../dist/js/sb-admin-2.js" type="text/javascript"></script>
+
+         <script>
+         function coursefullAvail() {
+             $("#loaderIcon").show();
+             jQuery.ajax({
+                 url: "course_availability.php",
+                 data: 'cfull1=' + $("#cfull").val(),
+                 type: "POST",
+                 success: function(data) {
+                     $("#course-status").html(data);
+                     $("#loaderIcon").hide();
+                 },
+                 error: function() {}
+             });
+         }
+
+         function courseAvailability() {
+             $("#loaderIcon").show();
+             jQuery.ajax({
+                 url: "course_availability.php",
+                 data: 'cshort1=' + $("#cshort").val(),
+                 type: "POST",
+                 success: function(data) {
+                     $("#course-availability-status").html(data);
+                     $("#loaderIcon").hide();
+                 },
+                 error: function() {}
+             });
+         }
+         </script>
+     </form>
+ </body>
+
+ </html>

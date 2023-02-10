@@ -1,4 +1,8 @@
-<?php
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+--><?php
 include('dbcontroller.php');
 if(!empty($_POST["id"])) 
 {
@@ -9,8 +13,8 @@ if(!empty($_POST["id"]))
  while($row=$stmt->fetch(PDO::FETCH_ASSOC))
  {
   ?>
-  <option value="<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['name']); ?></option>
-  <?php
+ <option value="<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['name']); ?></option>
+ <?php
  }
  
  
@@ -26,8 +30,8 @@ if(!empty($_POST["did"]))
  while($row=$stmt->fetch(PDO::FETCH_ASSOC))
  {
   ?>
-  <option value="<?php echo htmlentities($row['name']); ?>"><?php echo htmlentities($row['name']); ?></option>
-  <?php
+ <option value="<?php echo htmlentities($row['name']); ?>"><?php echo htmlentities($row['name']); ?></option>
+ <?php
  }
  
  }
@@ -49,3 +53,8 @@ if(!empty($_POST["did"]))
  }
 
 ?>
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->

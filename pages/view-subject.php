@@ -135,7 +135,11 @@ if (! (isset ( $_SESSION ['login'] ))) {
 
             </div>
             <!-- /#page-wrapper -->
-
+            <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
     </div>
     <!-- /#wrapper -->
 
@@ -165,5 +169,10 @@ if (! (isset ( $_SESSION ['login'] ))) {
     </script>
 
 </body>
+<!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
 
 </html>

@@ -1,4 +1,11 @@
 //Flot Line Chart
+/*
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+*/
 $(document).ready(function() {
     console.log("document ready");
     var offset = 0;
@@ -1240,3 +1247,10 @@ $(function() {
     $.plot($("#flot-bar-chart"), [barData], barOptions);
 
 });
+/*
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+*/

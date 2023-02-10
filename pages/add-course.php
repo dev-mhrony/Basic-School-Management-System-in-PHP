@@ -1,4 +1,8 @@
-<?php
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+--><?php
 session_start ();
 
 if (! (isset ( $_SESSION ['login'] ))) {
@@ -15,169 +19,189 @@ if(isset($_POST['submit'])){
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+ <html lang="en">
 
-<head>
+ <head>
+     <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="description" content="">
+     <meta name="author" content="">
+     <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+     <title>add course</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+     <!-- Bootstrap Core CSS -->
+     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>add course</title>
+     <!-- MetisMenu CSS -->
+     <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Custom CSS -->
+     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
 
-    <!-- MetisMenu CSS -->
-    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+     <!-- Custom Fonts -->
+     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+ </head>
 
-    <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+ <body>
+     <form method="post">
+         <div id="wrapper">
 
-    <!-- Custom Fonts -->
-    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-</head>
+             <!-- Navigation -->
+             <?php include('leftbar.php')?>;
+             <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+             <!--nav-->
+             <div id="page-wrapper">
+                 <div class="row">
+                     <div style="padding-top: 10px;">
+                         <marquee onMouseOver="this.stop()" onMouseOut="this.start()"> <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> is the sole owner of this script. It is not suitable for personal use. And releasing it in demo version. Besides, it is being provided for free only from <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>. For any of your problems contact us on <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> facebook group / page or message <a href="https://www.facebook.com/dev.mhrony">MH RONY</a> on facebook. Thanks for staying with <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>.</marquee>
+                     </div>
+                     <div class="col-lg-12">
+                         <h4 class="page-header"> <?php echo strtoupper("welcome"." ".htmlentities($_SESSION['login']));?></h4>
+                     </div>
+                     <!-- /.col-lg-12 -->
+                 </div>
+                 <!-- /.row -->
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <div class="panel panel-default">
+                             <div class="panel-heading">Add Course</div>
+                             <div class="panel-body">
+                                 <div class="row">
+                                     <div class="col-lg-10">
 
-<body>
-    <form method="post">
-        <div id="wrapper">
+                                         <div class="form-group">
+                                             <div class="col-lg-4">
+                                                 <label>Course Short Name<span id="" style="font-size:11px;color:red">*</span> </label>
+                                             </div>
+                                             <div class="col-lg-6">
 
-            <!-- Navigation -->
-            <?php include('leftbar.php')?>;
+                                                 <input class="form-control" name="course-short" id="cshort" required="required" onblur="courseAvailability()">
+                                                 <span id="course-availability-status" style="font-size:12px;"></span>
+                                             </div>
 
-            <!--nav-->
-            <div id="page-wrapper">
-                <div class="row">
-                    <div style="padding-top: 10px;">
-                        <marquee onMouseOver="this.stop()" onMouseOut="this.start()"> <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> is the sole owner of this script. It is not suitable for personal use. And releasing it in demo version. Besides, it is being provided for free only from <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>. For any of your problems contact us on <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> facebook group / page or message <a href="https://www.facebook.com/dev.mhrony">MH RONY</a> on facebook. Thanks for staying with <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a>.</marquee>
-                    </div>
-                    <div class="col-lg-12">
-                        <h4 class="page-header"> <?php echo strtoupper("welcome"." ".htmlentities($_SESSION['login']));?></h4>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <!-- /.row -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Add Course</div>
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-lg-10">
+                                         </div>
 
-                                        <div class="form-group">
-                                            <div class="col-lg-4">
-                                                <label>Course Short Name<span id="" style="font-size:11px;color:red">*</span> </label>
-                                            </div>
-                                            <div class="col-lg-6">
+                                         <br><br>
 
-                                                <input class="form-control" name="course-short" id="cshort" required="required" onblur="courseAvailability()">
-                                                <span id="course-availability-status" style="font-size:12px;"></span>
-                                            </div>
+                                         <div class="form-group">
+                                             <div class="col-lg-4">
+                                                 <label>Course Full Name<span id="" style="font-size:11px;color:red">*</span></label>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                 <input class="form-control" name="course-full" id="cfull" required="required" onblur="coursefullAvail()">
+                                                 <span id="course-status" style="font-size:12px;"></span>
+                                             </div>
+                                         </div>
 
-                                        </div>
+                                         <br><br>
+                                         <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+                                         <div class="form-group">
+                                             <div class="col-lg-4">
+                                                 <label>Creation Date</label>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                 <input class="form-control" value="<?php echo date('d-m-Y');?>" readonly="readonly" name="cdate">
 
-                                        <br><br>
+                                             </div>
+                                         </div>
+                                     </div>
 
-                                        <div class="form-group">
-                                            <div class="col-lg-4">
-                                                <label>Course Full Name<span id="" style="font-size:11px;color:red">*</span></label>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <input class="form-control" name="course-full" id="cfull" required="required" onblur="coursefullAvail()">
-                                                <span id="course-status" style="font-size:12px;"></span>
-                                            </div>
-                                        </div>
+                                     <br><br>
 
-                                        <br><br>
+                                     <div class="form-group">
+                                         <div class="col-lg-4">
 
-                                        <div class="form-group">
-                                            <div class="col-lg-4">
-                                                <label>Creation Date</label>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <input class="form-control" value="<?php echo date('d-m-Y');?>" readonly="readonly" name="cdate">
+                                         </div>
+                                         <div class="col-lg-6"><br><br>
+                                             <input type="submit" class="btn btn-primary" name="submit" value="Create Course"></button>
+                                         </div>
 
-                                            </div>
-                                        </div>
-                                    </div>
+                                     </div>
+                                     <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
+                                 </div>
 
-                                    <br><br>
+                             </div>
 
-                                    <div class="form-group">
-                                        <div class="col-lg-4">
+                         </div>
 
-                                        </div>
-                                        <div class="col-lg-6"><br><br>
-                                            <input type="submit" class="btn btn-primary" name="submit" value="Create Course"></button>
-                                        </div>
+                     </div>
 
-                                    </div>
+                 </div>
 
-                                </div>
+             </div>
+             <p style="text-align: center;"> CopyRight by <a href="">Code Camp BD</a> Design and Developer <a href="">MH RONY</a> All Resalve 2023</p>
 
-                            </div>
+         </div>
 
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-            <p style="text-align: center;"> CopyRight by <a href="">Code Camp BD</a> Design and Developer <a href="">MH RONY</a> All Resalve 2023</p>
-
-        </div>
-
-        </div>
+         </div>
 
 
-        </div>
+         </div>
 
-        <script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+         <script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 
 
-        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+         <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
 
-        <!-- Metis Menu Plugin JavaScript -->
-        <script src="../bower_components/metisMenu/dist/metisMenu.min.js" type="text/javascript"></script>
+         <!-- Metis Menu Plugin JavaScript -->
+         <script src="../bower_components/metisMenu/dist/metisMenu.min.js" type="text/javascript"></script>
 
-        <!-- Custom Theme JavaScript -->
-        <script src="../dist/js/sb-admin-2.js" type="text/javascript"></script>
+         <!-- Custom Theme JavaScript -->
+         <script src="../dist/js/sb-admin-2.js" type="text/javascript"></script>
 
-        <script>
-        function courseAvailability() {
-            $("#loaderIcon").show();
-            jQuery.ajax({
-                url: "course_availability.php",
-                data: 'cshort=' + $("#cshort").val(),
-                type: "POST",
-                success: function(data) {
-                    $("#course-availability-status").html(data);
-                    $("#loaderIcon").hide();
-                },
-                error: function() {}
-            });
-        }
+         <script>
+         function courseAvailability() {
+             $("#loaderIcon").show();
+             jQuery.ajax({
+                 url: "course_availability.php",
+                 data: 'cshort=' + $("#cshort").val(),
+                 type: "POST",
+                 success: function(data) {
+                     $("#course-availability-status").html(data);
+                     $("#loaderIcon").hide();
+                 },
+                 error: function() {}
+             });
+         }
 
-        function coursefullAvail() {
-            $("#loaderIcon").show();
-            jQuery.ajax({
-                url: "course_availability.php",
-                data: 'cfull=' + $("#cfull").val(),
-                type: "POST",
-                success: function(data) {
-                    $("#course-status").html(data);
-                    $("#loaderIcon").hide();
-                },
-                error: function() {}
-            });
-        }
-        </script>
-    </form>
-</body>
+         function coursefullAvail() {
+             $("#loaderIcon").show();
+             jQuery.ajax({
+                 url: "course_availability.php",
+                 data: 'cfull=' + $("#cfull").val(),
+                 type: "POST",
+                 success: function(data) {
+                     $("#course-status").html(data);
+                     $("#loaderIcon").hide();
+                 },
+                 error: function() {}
+             });
+         }
+         </script>
+     </form>
+ </body>
 
-</html>
+ </html>

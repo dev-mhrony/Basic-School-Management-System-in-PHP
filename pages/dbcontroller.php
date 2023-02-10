@@ -1,4 +1,8 @@
-<?php
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+--><?php
 $DB_host = "localhost";
 $DB_user = "root";
 $DB_pass = "";
@@ -13,3 +17,8 @@ catch(PDOException $e)
  $e->getMessage();
 }
 ?>
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->

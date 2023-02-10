@@ -1,4 +1,8 @@
-<?php
+ <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+--><?php
 session_start ();
 
 if (! (isset ( $_SESSION ['login'] ))) {
@@ -189,6 +193,11 @@ include('../config/DbFunction.php');
                                                 </div>
                                             </div>
                                             <br><br>
+                                            <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
                                             <div class="form-group">
                                                 <div class="col-lg-2">
                                                     <label>Guardian Name<span id="" style="font-size:11px;color:red">*</span> </label>
@@ -319,7 +328,11 @@ include('../config/DbFunction.php');
                                                         </div>
 
                                                     </div>
-
+                                                    <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
                                                     <br><br><br><br>
                                                     <div class="form-group">
                                                         <div class="col-lg-2">
@@ -416,7 +429,11 @@ include('../config/DbFunction.php');
                                                                                             </div>
                                                                                         </td>
                                                                                     </tr>
-
+                                                                                    <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
                                                                                     <tr>
                                                                                         <td>
                                                                                             <div class="col-lg-6">
@@ -505,6 +522,11 @@ include('../config/DbFunction.php');
                                                                                             </div>
                                                                                         </td>
                                                                                         <td>
+                                                                                            <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
                                                                                             <div class="col-lg-6">
                                                                                                 <input class="form-control" type="text" name="fmarks2" value="<?php echo htmlentities($res->fmarks1);?>">
                                                                                             </div>
@@ -605,6 +627,11 @@ include('../config/DbFunction.php');
                                 }
                                 </script>
     </form>
+    <!-- Author By: MH RONY
+Author Website: https://developerrony.com
+Github Link: https://github.com/dev-mhrony
+Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
+-->
 </body>
 
 </html>
