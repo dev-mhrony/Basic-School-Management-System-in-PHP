@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 27, 2019 at 07:46 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Host: localhost:3306
+-- Generation Time: Feb 10, 2023 at 05:07 AM
+-- Server version: 8.0.30
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -29,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cities` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(30) NOT NULL,
-  `state_id` int(11) NOT NULL
+  `state_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -47646,7 +47645,7 @@ INSERT INTO `cities` (`id`, `name`, `state_id`) VALUES
 --
 
 CREATE TABLE `countries` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `sortname` varchar(50) NOT NULL,
   `name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -47933,8 +47932,8 @@ CREATE TABLE `registration` (
   `roll` varchar(50) NOT NULL,
   `pyear` varchar(50) NOT NULL,
   `sub` varchar(250) NOT NULL,
-  `marks` bigint(100) NOT NULL,
-  `fmarks` bigint(100) NOT NULL,
+  `marks` bigint NOT NULL,
+  `fmarks` bigint NOT NULL,
   `board1` varchar(250) NOT NULL,
   `roll1` varchar(250) NOT NULL,
   `yop1` varchar(250) NOT NULL,
@@ -47944,15 +47943,8 @@ CREATE TABLE `registration` (
   `marks1` varchar(50) NOT NULL,
   `fmarks1` varchar(50) NOT NULL,
   `regno` varchar(250) NOT NULL,
-  `id` int(11) NOT NULL
+  `id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `registration`
---
-
-INSERT INTO `registration` (`course`, `subject`, `fname`, `mname`, `lname`, `gender`, `gname`, `ocp`, `income`, `category`, `pchal`, `nationality`, `mobno`, `emailid`, `country`, `state`, `dist`, `padd`, `cadd`, `board`, `roll`, `pyear`, `sub`, `marks`, `fmarks`, `board1`, `roll1`, `yop1`, `sub1`, `session`, `regdate`, `marks1`, `fmarks1`, `regno`, `id`) VALUES
-('13', 'OPERATING SYSTEM+DATA STRUCTURE+ NETWOKING', 'Anuj', 'Kumar', 'Singh', 'Male', 'IT Service', 'Male', '500000', 'general', 'general', 'Indian', '1234567890', 'phpgurukulofficial@gmail.com', '101', '4', '', 'Mayur Vihar', 'Mayur Vihar', '10 UP Board', '12 UP Board', '123456', '654332', 2010, 2012, 'Hindi', 'English', '80', '60', '2010-2011', '2019-05-27 17:11:59', '100', '100', '1307692170', 3);
 
 -- --------------------------------------------------------
 
@@ -47961,10 +47953,10 @@ INSERT INTO `registration` (`course`, `subject`, `fname`, `mname`, `lname`, `gen
 --
 
 CREATE TABLE `session` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `session` varchar(50) NOT NULL,
   `postingdate` date NOT NULL,
-  `status` int(11) NOT NULL
+  `status` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -47989,9 +47981,9 @@ INSERT INTO `session` (`id`, `session`, `postingdate`, `status`) VALUES
 --
 
 CREATE TABLE `states` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(30) NOT NULL,
-  `country_id` int(11) NOT NULL DEFAULT '1'
+  `country_id` int NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -52127,7 +52119,7 @@ INSERT INTO `states` (`id`, `name`, `country_id`) VALUES
 --
 
 CREATE TABLE `subject` (
-  `subid` int(11) NOT NULL,
+  `subid` int NOT NULL,
   `cshort` varchar(50) DEFAULT NULL,
   `cfull` varchar(250) DEFAULT NULL,
   `sub1` varchar(250) DEFAULT NULL,
@@ -52137,17 +52129,6 @@ CREATE TABLE `subject` (
   `update_date` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `subject`
---
-
-INSERT INTO `subject` (`subid`, `cshort`, `cfull`, `sub1`, `sub2`, `sub3`, `dt_created`, `update_date`) VALUES
-(3, '8', 'MASTER OF SCIENCE', 'Mathematics', 'Physics', 'Chemistry', '2016-04-16 18:08:27', NULL),
-(6, '10', 'BACHELOR OF TECHNOLOGY', 'Engineering Drawing', 'Computer Programming', 'Computer Science Essentials', '2016-04-16 19:51:43', NULL),
-(7, '12', 'Bachelor of Arts ', 'Economics', 'History', 'Geography', '2019-05-27 22:34:40', NULL),
-(8, '9', 'BACHELOR OF COMMERCE', 'test1', 'test2', 'test3', '2019-05-27 22:36:36', NULL),
-(9, '13', 'Master of Technology', 'Operating System', 'Data Structure', 'Netwoking', '2019-05-27 22:39:41', '27-05-2019');
-
 -- --------------------------------------------------------
 
 --
@@ -52155,25 +52136,12 @@ INSERT INTO `subject` (`subid`, `cshort`, `cfull`, `sub1`, `sub2`, `sub3`, `dt_c
 --
 
 CREATE TABLE `tbl_course` (
-  `cid` int(11) NOT NULL,
+  `cid` int NOT NULL,
   `cshort` varchar(250) DEFAULT NULL,
   `cfull` varchar(250) DEFAULT NULL,
   `cdate` varchar(50) DEFAULT NULL,
   `update_date` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_course`
---
-
-INSERT INTO `tbl_course` (`cid`, `cshort`, `cfull`, `cdate`, `update_date`) VALUES
-(7, 'M.C.A.', 'MASTER OF COMPUTER APPLICATION', '11-04-2016', '27-05-2019'),
-(8, 'M.S.C', 'MASTER OF SCIENCE', '11-04-2016', NULL),
-(9, 'B.Com', 'BACHELOR OF COMMERCE', '12-04-2016', NULL),
-(10, 'B.TECH', 'BACHELOR OF TECHNOLOGY', '12-04-2016', NULL),
-(11, 'M.B.A', 'MASTER OF BUSINESS ADMINISTRATION', '17-04-2016', NULL),
-(12, 'B.A.', 'Bachelor of Arts ', '27-05-2019', '27-05-2019'),
-(13, 'M.Tech', 'Master of Technology', '27-05-2019', '27-05-2019');
 
 -- --------------------------------------------------------
 
@@ -52182,7 +52150,7 @@ INSERT INTO `tbl_course` (`cid`, `cshort`, `cfull`, `cdate`, `update_date`) VALU
 --
 
 CREATE TABLE `tbl_login` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `loginid` varchar(250) NOT NULL,
   `password` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -52192,7 +52160,7 @@ CREATE TABLE `tbl_login` (
 --
 
 INSERT INTO `tbl_login` (`id`, `loginid`, `password`) VALUES
-(1, 'admin', 'admin');
+(1, 'codecampbd', '8171fce4af3ee0aa62fc6924e940520f');
 
 --
 -- Indexes for dumped tables
@@ -52254,49 +52222,49 @@ ALTER TABLE `tbl_login`
 -- AUTO_INCREMENT for table `cities`
 --
 ALTER TABLE `cities`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47577;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47577;
 
 --
 -- AUTO_INCREMENT for table `countries`
 --
 ALTER TABLE `countries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
 
 --
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `session`
 --
 ALTER TABLE `session`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `states`
 --
 ALTER TABLE `states`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4121;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4121;
 
 --
 -- AUTO_INCREMENT for table `subject`
 --
 ALTER TABLE `subject`
-  MODIFY `subid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `subid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_course`
 --
 ALTER TABLE `tbl_course`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `cid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tbl_login`
 --
 ALTER TABLE `tbl_login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
