@@ -1,10 +1,6 @@
-# Basic-School-Management-System-in-PHP
+# Basic Student Management System-in-PHP
 
-Basic School Management System in PHP make by Code Camp BD
-
-## Admin Panel
-
-# Online Car Booking System in PHP
+Basic Student Management System in PHP make by Code Camp BD
 
 ### About Online Booking System PHP Project
 
