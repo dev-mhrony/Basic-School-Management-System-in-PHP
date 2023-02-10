@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 10, 2023 at 05:07 AM
+-- Generation Time: Feb 10, 2023 at 06:50 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -52160,7 +52160,7 @@ CREATE TABLE `tbl_login` (
 --
 
 INSERT INTO `tbl_login` (`id`, `loginid`, `password`) VALUES
-(1, 'codecampbd', '8171fce4af3ee0aa62fc6924e940520f');
+(1, 'admin', 'codecampbd');
 
 --
 -- Indexes for dumped tables
@@ -52264,7 +52264,7 @@ ALTER TABLE `tbl_course`
 -- AUTO_INCREMENT for table `tbl_login`
 --
 ALTER TABLE `tbl_login`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
