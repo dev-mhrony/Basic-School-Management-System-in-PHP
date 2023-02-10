@@ -516,6 +516,7 @@ include('../config/DbFunction.php');
                                     </div>
                                 </div>
     </form>
+    <p style="text-align: center;"> CopyRight by <a href="">Code Camp BD</a> Design and Developer <a href="">MH RONY</a> All Resalve 2023</p>
 
     <!-- jQuery -->
     <script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
